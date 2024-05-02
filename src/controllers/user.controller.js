@@ -1,4 +1,4 @@
-function pingUserController(req, res) {
+function ping(req, res) {
   return res.json({ message: "Ping from UserController " });
 }
 
@@ -12,5 +12,5 @@ module.exports = {
   addUser,
   getUser,
   updateUser,
-  pingUserController,
+  ping,
 };

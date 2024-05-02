@@ -1,12 +1,13 @@
 const express = require("express");
 
-const { UserController } = require("../../controllers");
+const { userController, followController } = require("../../controllers");
 
 const userRouter = express.Router();
 
-userRouter.get("/ping", UserController.pingUserController);
-userRouter.post("/", UserController.addUser);
-userRouter.get("/:id", UserController.getUser);
-userRouter.put("/:id", UserController.updateUser);
+userRouter.get("/ping", userController.ping);
+userRouter.post("/", userController.addUser);
+userRouter.get("/:id", userController.getUser);
+userRouter.put("/:id", userController.updateUser);
+userRouter.post("/:id/follow/:target_id", followController.followUser);
 
 module.exports = userRouter;
