@@ -1,5 +1,5 @@
 function ping(req, res) {
-  return res.json({ message: "Ping from UserController " });
+  return res.json({ message: "Ping from Topic Controller " });
 }
 
 function addTopic(req, res) {}
